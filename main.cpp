@@ -23,12 +23,19 @@ int main() {
     int test_num = getInt();
 
     long long dormRoomInfo[dorm_num];
-    
+
+    int subtracts_len = dorm_num + 1;
+    long long subtracts[subtracts_len];
+    subtracts[0] = 0;
     for (int i = 0; i < dorm_num; i++){
         dormRoomInfo[i] = getLongLong();
+        subtracts[i + 1] = dormRoomInfo[i] + subtracts[i]; 
+    }
+    for (int i = 0; i < subtracts_len; i ++){
+        cout << "Subtracts[" << i << "]: " << subtracts[i] << endl;
     }
 
-
+    
     for (int i = 0; i < test_num; i++){
         long long l = getLongLong();
 
