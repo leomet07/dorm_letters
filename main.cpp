@@ -3,17 +3,14 @@
 using namespace std;
 
 int getInt(){
-    string holder;
-    cin >> holder;
-    int i = stoi(holder);
-
+    int i;
+    cin >> i;
     return i;
 }
 
 long long getLongLong(){
-    string holder;
-    cin >> holder;
-    long long l = stoll(holder);
+    long long l;
+    cin >> l;
     return l;
 }
 
@@ -46,6 +43,8 @@ long long opti_index(long long* a, long long len, long long v){
 
 
 int main() {
+    ios::sync_with_stdio(0);
+	cin.tie(0);
 
     int dorm_num = getInt();
     int test_num = getInt();
