@@ -10,13 +10,13 @@ int getInt(){
     return i;
 }
 
-int getLong(){
+long getLong(){
     string holder;
     cin >> holder;
     long l = stol(holder);
-    cout << "The long: " << l << endl;
     return l;
 }
+
 int main() {
 
     int dorm_num = getInt();
@@ -55,12 +55,10 @@ int main() {
         // cout << "L: " << l << endl;
         long sim = l * 1;
 
-        cout << "Sim start: " << sim << endl;
         long dorm = 0; 
         while (sim > 0){
-            cout << "Sim before: " <<sim << endl;
             sim -= dormRoomInfo[dorm];
-            cout << "Sim after: " << sim << endl;
+            
             dorm ++;
         }
 
