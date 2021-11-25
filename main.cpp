@@ -10,10 +10,10 @@ int getInt(){
     return i;
 }
 
-long getLong(){
+long long getLongLong(){
     string holder;
     cin >> holder;
-    long l = stol(holder);
+    long long l = stoll(holder);
     return l;
 }
 
@@ -22,21 +22,23 @@ int main() {
     int dorm_num = getInt();
     int test_num = getInt();
 
-    long dormRoomInfo[dorm_num];
+    long long dormRoomInfo[dorm_num];
+    
     for (int i = 0; i < dorm_num; i++){
-        dormRoomInfo[i] = getLong();
+        dormRoomInfo[i] = getLongLong();
     }
 
-    for (int i = 0; i < test_num; i++){
-        long l = getLong();
 
-        long dorm = 0; 
+    for (int i = 0; i < test_num; i++){
+        long long l = getLongLong();
+
+        long long dorm = 0; 
         while (l > 0){
             l -= dormRoomInfo[dorm];
             dorm ++;
         }
 
-        long room = dormRoomInfo[dorm -1] + l;
+        long long room = dormRoomInfo[dorm -1] + l;
         cout << dorm << " " << room << endl;
 
     }
